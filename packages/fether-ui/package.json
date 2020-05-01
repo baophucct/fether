@@ -28,7 +28,9 @@
   "scripts": {
     "prebuild": "rimraf lib",
     "build": "babel src --out-dir lib",
-    "start": "yarn build --watch"
+    "start": "yarn build --watch",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "dependencies": {
     "babel-plugin-inline-import-data-uri": "^1.0.1",
@@ -36,7 +38,8 @@
     "react-content-loader": "^3.1.2",
     "react-dropzone": "^7.0.1",
     "semantic-ui-css": "^2.3.2",
-    "semantic-ui-react": "^0.81.3"
+    "semantic-ui-react": "^0.81.3",
+    "snyk": "^*"
   },
   "devDependencies": {
     "@babel/cli": "^7.0.0-beta.49",
@@ -51,5 +54,6 @@
   "peerDependencies": {
     "prop-types": "^15.6.1",
     "react": "^16.4.0"
-  }
+  },
+  "snyk": true
 }
