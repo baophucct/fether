@@ -31,7 +31,9 @@
     "start": "npm-run-all -p start-*",
     "start-css": "npm run build-css -- --watch --recursive",
     "start-js": "cross-env SKIP_PREFLIGHT_CHECK=true BROWSER=none craco start --react-scripts ../../node_modules/react-scripts",
-    "test": "ln -s ../../../node_modules/react-scripts node_modules/ && cross-env SKIP_PREFLIGHT_CHECK=true craco test; rm node_modules/react-scripts"
+    "test": "ln -s ../../../node_modules/react-scripts node_modules/ && cross-env SKIP_PREFLIGHT_CHECK=true craco test; rm node_modules/react-scripts",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "dependencies": {
     "@craco/craco": "^3.2.3",
@@ -68,7 +70,8 @@
     "react-router-dom": "^4.2.2",
     "react-scripts": "^2.1.1",
     "recompose": "^0.27.1",
-    "rxjs": "^6.2.0"
+    "rxjs": "^6.2.0",
+    "snyk": "^1.316.1"
   },
   "devDependencies": {
     "@babel/plugin-proposal-decorators": "^7.2.0",
@@ -82,5 +85,6 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "snyk": true
 }
