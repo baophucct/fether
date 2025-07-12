@@ -34,7 +34,7 @@
     "test": "ln -s ../../../node_modules/react-scripts node_modules/ && cross-env SKIP_PREFLIGHT_CHECK=true craco test; rm node_modules/react-scripts"
   },
   "dependencies": {
-    "@craco/craco": "^3.2.3",
+    "@craco/craco": "^5.2.0",
     "@parity/abi": "^3.0.25",
     "@parity/api": "^3.0.25",
     "@parity/contracts": "^3.0.25",
@@ -66,7 +66,7 @@
     "react-markdown": "^3.3.4",
     "react-resize-detector": "^3.0.1",
     "react-router-dom": "^4.2.2",
-    "react-scripts": "^2.1.1",
+    "react-scripts": "^5.0.0",
     "recompose": "^0.27.1",
     "rxjs": "^6.2.0"
   },
